@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment and Secrets
+.env
+.env.local
+.streamlit/secrets.toml
+
+# Streamlit
+.streamlit/*.pyc
+
+# Temporary video and media processing
+temp/*
+!temp/.gitkeep
+output/
+
+# Generated video files (never commit output media)
+*.mp4
+
+# Temp audio/media files (only in temp dir)
+temp/*.wav
+temp/*.mp3
+temp/*.png
+temp/*.jpg
+temp/*.jpeg
+
+# IMPORTANT: Do NOT exclude assets/sample_products/ images —
+# the bundled product photos must be committed and deployed to Streamlit Cloud.
+# Only exclude loose images at root level:
+/*.png
+/*.jpg
+/*.jpeg
+# Only exclude loose audio at root level (keep assets/music/):
+/*.wav
+/*.mp3
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/

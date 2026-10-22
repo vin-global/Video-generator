@@ -1,0 +1,30 @@
+# AI-Powered Automatic Video Generation System for Small Businesses
+# Streamlit Cloud & Cross-Platform Production Requirements
+
+# Core Web Application Framework
+streamlit>=1.35.0
+
+# AI Marketing Script Generation (Google Gemini)
+google-genai>=0.1.0
+google-auth>=2.0.0
+
+# Video Editing & Composition Engine
+moviepy>=1.0.3,<2.0.0
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.9
+decorator>=4.4.2
+proglog>=0.1.10
+tqdm>=4.66.0
+
+# Image & Frame Processing
+pillow>=10.0.0
+numpy>=1.24.0
+
+# Text-to-Speech Engine (Google TTS)
+gTTS>=2.5.0
+
+# Stock Media Retrieval & HTTP APIs
+requests>=2.31.0
+
+# Local Environment Variables (.env support)
+python-dotenv>=1.0.0

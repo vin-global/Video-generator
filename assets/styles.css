@@ -1,0 +1,324 @@
+/* AI Video Generator - Modern Responsive Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* Base typography */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================================
+   DARK BLUE THEME (Midnight Navy & Electric Cyan)
+   ========================================= */
+.theme-dark-blue {
+    --bg-main: #060d1f;
+    --bg-secondary: #0b1736;
+    --bg-card: rgba(16, 30, 65, 0.75);
+    --border-color: rgba(56, 189, 248, 0.2);
+    --border-glow: rgba(56, 189, 248, 0.4);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-accent: #38bdf8;
+    --card-shadow: 0 12px 32px rgba(2, 6, 23, 0.6);
+    --btn-primary-bg: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    --btn-primary-hover: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    --input-bg: #0b1530;
+    --input-border: #1e293b;
+    --badge-bg: rgba(56, 189, 248, 0.15);
+    --stepper-active: #38bdf8;
+    --stepper-inactive: #1e293b;
+}
+
+/* Apply Dark Blue Theme to Streamlit container */
+.stApp:has(.theme-dark-blue) {
+    background: radial-gradient(circle at 50% 0%, #0f1f47 0%, #060d1f 65%, #030712 100%) !important;
+    color: #f8fafc !important;
+}
+
+.stApp:has(.theme-dark-blue) header {
+    background: transparent !important;
+}
+
+.stApp:has(.theme-dark-blue) [data-testid="stSidebar"] {
+    background: #081129 !important;
+    border-right: 1px solid rgba(56, 189, 248, 0.15) !important;
+}
+
+/* =========================================
+   CLEAN WHITE THEME (Minimalist & Slate Blue)
+   ========================================= */
+.theme-clean-white {
+    --bg-main: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-glow: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-accent: #2563eb;
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --btn-primary-bg: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    --btn-primary-hover: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --badge-bg: #eff6ff;
+    --stepper-active: #2563eb;
+    --stepper-inactive: #e2e8f0;
+}
+
+/* Apply Clean White Theme to Streamlit container */
+.stApp:has(.theme-clean-white) {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+.stApp:has(.theme-clean-white) header {
+    background: transparent !important;
+}
+
+.stApp:has(.theme-clean-white) [data-testid="stSidebar"] {
+    background: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
+}
+
+/* =========================================
+   COMMON HERO & HEADER STYLES
+   ========================================= */
+.hero-container {
+    padding: 2.2rem 1.8rem;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.theme-dark-blue .hero-container {
+    background: linear-gradient(135deg, rgba(15, 30, 65, 0.8) 0%, rgba(8, 17, 41, 0.9) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 20px 40px -15px rgba(2, 6, 23, 0.7);
+}
+
+.theme-clean-white .hero-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.theme-dark-blue .hero-tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.theme-clean-white .hero-tag {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+}
+
+.theme-dark-blue .hero-title {
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff 40%, #7dd3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme-clean-white .hero-title {
+    color: #0f172a;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 780px;
+}
+
+.theme-dark-blue .hero-subtitle {
+    color: #94a3b8;
+}
+
+.theme-clean-white .hero-subtitle {
+    color: #475569;
+}
+
+/* =========================================
+   STEPPER PROGRESS BAR
+   ========================================= */
+.stepper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 1.5rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.25s ease;
+}
+
+.theme-dark-blue .step-card.active {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.theme-dark-blue .step-card.inactive {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid #1e293b;
+    opacity: 0.7;
+}
+
+.theme-clean-white .step-card.active {
+    background: #eff6ff;
+    border: 1px solid #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.theme-clean-white .step-card.inactive {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    opacity: 0.7;
+}
+
+.step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.theme-dark-blue .step-card.active .step-number {
+    background: #38bdf8;
+    color: #060d1f;
+}
+
+.theme-dark-blue .step-card.inactive .step-number {
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+.theme-clean-white .step-card.active .step-number {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.theme-clean-white .step-card.inactive .step-number {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.step-text {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   CUSTOM CARDS & PANELS
+   ========================================= */
+.custom-card {
+    padding: 1.8rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    transition: all 0.25s ease;
+}
+
+.theme-dark-blue .custom-card {
+    background: rgba(15, 26, 56, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.5);
+}
+
+.theme-clean-white .custom-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Stat pills for generated video */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 1.2rem 0;
+}
+
+.stat-pill {
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.theme-dark-blue .stat-pill {
+    background: #0d1b3d;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.theme-clean-white .stat-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.theme-dark-blue .stat-label {
+    color: #94a3b8;
+}
+
+.theme-clean-white .stat-label {
+    color: #64748b;
+}
+
+.stat-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.theme-dark-blue .stat-value {
+    color: #38bdf8;
+}
+
+.theme-clean-white .stat-value {
+    color: #2563eb;
+}
